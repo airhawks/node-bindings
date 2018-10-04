@@ -78,7 +78,7 @@ function bindings (opts) {
     }))
     tries.push(n)
     try {
-      b = opts.path ? require.resolve(n) : require(n)
+      b = opts.path ? require.resolve(`${n}`) : require(`${n}`)
       if (!opts.path) {
         b.path = n
       }
